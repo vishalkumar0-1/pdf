@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LIC Consolidated Bill - 2026</title>
+    <style>
+        :root {
+            --primary: #003366;
+            --secondary: #00509d;
+            --accent: #ffcc00;
+        }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f0f2f5; padding: 20px; }
+        
+        .bill-card {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        /* HEADER SECTION */
+        .header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 25px 40px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .photo-container {
+            width: 100px;
+            height: 120px;
+            border: 3px solid white;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-shrink: 0;
+            background: white;
+        }
+
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .header-text h1 { margin: 0; font-size: 24px; text-transform: uppercase; }
+        .header-text p { margin: 5px 0 0; opacity: 0.9; font-size: 16px; }
+
+        /* TABLE STYLING */
+        .content { padding: 30px; }
+        table { width: 100%; border-collapse: collapse; }
+        th { background: #f1f5f9; color: var(--primary); padding: 12px; text-align: left; font-size: 13px; }
+        td { padding: 10px; border-bottom: 1px solid #eee; font-size: 13px; }
+        .total-row { background: #fffde7; font-weight: bold; font-size: 16px; color: #d32f2f; }
+
+        /* FOOTER & QR SECTION */
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 20px;
+            padding: 20px 30px;
+            background: #fafafa;
+        }
+
+        .qr-box {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+            border-radius: 10px;
+            background: white;
+        }
+
+        .qr-img {
+            width: 130px;
+            height: 130px;
+            object-fit: contain;
+        }
+
+        .fact-box {
+            background: #eef2ff;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 13px;
+            line-height: 1.4;
+            border-left: 4px solid var(--secondary);
+        }
+
+        /* PRINT SETTINGS */
+        @media print {
+            body { background: white; padding: 0; }
+            .bill-card { box-shadow: none; border: 1px solid #ccc; }
+            .pay-button { display: none !important; } /* Hide button during print */
+        }
+    </style>
+</head>
+<body>
+
+<div class="bill-card">
+    <div class="header">
+        <div class="photo-container">
+            <img src="my pic.jpg" alt="Advisor Photo">
+        </div>
+        <div class="header-text">
+            <h1>LIC Consolidated Statement</h1>
+            <p> Vishal Kumar Singh| NEHA TELCOM | Senior Life Insurance Advisor</p>
+            <div style="margin-top: 8px; font-size: 12px; background: rgba(255,255,255,0.2); display: inline-block; padding: 2px 10px; border-radius: 4px;">Verified Advisor ID: 9934291260</div>
+        </div>
+    </div>
+
+    <div class="content">
+        <table>
+            <thead>
+                <tr>
+                    <th>Policy Holder</th>
+                    <th>Policy Number</th>
+                    <th>Mode</th>
+                    <th>Premium</th>
+                    <th>Next Due Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Ujwal Kumar</td><td>869231352</td><td>Quarterly</td><td>₹4,604.00</td><td>13/03/2026</td></tr>
+                <tr><td>Anju Kumari</td><td>829640731</td><td>Half-Yearly</td><td>₹1,453.70</td><td>24/03/2026</td></tr>
+                <tr><td>Sachin Kumar</td><td>887144721</td><td>Annual</td><td>₹5,563.70</td><td>10/05/2026</td></tr>
+                <tr><td>Anita Kumari</td><td>869603296</td><td>Annual</td><td>₹5,588.90</td><td>15/05/2026</td></tr>
+                <tr><td>Mukesh Kumar</td><td>886424420</td><td>Annual</td><td>₹15,663.00</td><td>28/06/2026</td></tr>
+                <tr><td>Ravishek Kumar</td><td>887967184</td><td>Annual</td><td>₹19,306.90</td><td>23/09/2026</td></tr>
+                <tr><td>Sunita Singh</td><td>868383069</td><td>Annual</td><td>₹6,554.10</td><td>28/09/2026</td></tr>
+                <tr><td>Avinash Kumar</td><td>885489786</td><td>Yearly</td><td>₹9,422.90</td><td>27/10/2026</td></tr>
+                <tr><td>Sanshkar Bharti</td><td>885492139</td><td>Annual</td><td>₹5,432.70</td><td>17/11/2026</td></tr>
+                <tr class="total-row">
+                    <td colspan="3" style="text-align: right;">Total Amount Payable:</td>
+                    <td colspan="2">₹73,589.90</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="footer-grid">
+        <div class="insight-box">
+            <strong style="color: var(--primary); font-size: 14px;">🌟 The Power of Small Savings</strong>
+            <p style="margin: 10px 0;">
+                Did you know? Saving just <strong>₹200 per day</strong> adds up to <strong>₹73,000</strong> in a year.
+            </p>
+            <p style="margin: 8px 0;">
+                If you keep this small habit for 20 years at an 8% return, you would build a fund of over <strong>₹35 Lakhs</strong>. This total premium portfolio is the foundation of that massive future wealth.
+            </p>
+            <p style="font-style: italic; margin-bottom: 0;">"Small drops of water make a mighty ocean. Start small, stay consistent."</p>
+        </div>
+
+        <div class="qr-box">
+            <div style="font-size: 11px; font-weight: bold; margin-bottom: 5px; color: #666;">SCAN TO PAY VIA PAYTM / UPI</div>
+            <img src="my qr.jpeg" alt="Payment QR" class="qr-img">
+            <div style="font-size: 12px; margin-top: 5px; font-weight: bold; color: var(--primary);">9934291260@ptaxis</div>
+            
+            <a class="pay-button" href="upi://pay?pa=9934291260@ptaxis&pn=Vishal%20Kumar%20Singh&am=73589.90&cu=INR" 
+               style="display: block; background: #28a745; color: white; padding: 12px; border-radius: 8px; text-decoration: none; font-size: 14px; font-weight: bold; margin-top: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+               PAY TOTAL PREMIUM
+            </a>
+            <div style="font-size: 10px; color: #888; margin-top: 5px;">Opens PhonePe, GPay, or Paytm</div>
+        </div>
+    </div>
+
+    <div class="signature-area" style="text-align: right; padding: 20px 40px 40px; font-family: 'Segoe UI', sans-serif;">
+        <div style="display: inline-block; text-align: center;">
+            <div style="border-top: 2px solid #333; width: 220px; padding-top: 8px;">
+                <strong style="color: #003366; font-size: 15px; text-transform: uppercase; letter-spacing: 1px;">
+                    Vishal Kumar Singh
+                </strong>
+                <div style="font-size: 12px; color: #666; margin-top: 2px;">
+                    Authorized Signature
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: var(--primary); color: white; text-align: center; padding: 10px; font-size: 10px; letter-spacing: 0.5px;">
+        SECURE | DIGITAL | VERIFIED — GENERATED VIA LIC ADVISOR PORTAL
+    </div>
+</div>
+
+</body>
+</html>
